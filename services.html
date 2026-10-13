@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>JP Hospital - Services</title>
+
+     <!--=====FAB ICON=======-->
+    <link rel="shortcut icon" href="assets/img/logo/442677277_466438559161188_4576483210212181879_n.jpg">
+
+    <!--===== CSS LINK =======-->
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/aos.css">
+    <link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/plugins/owlcarousel.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/sidebar.css">
+    <link rel="stylesheet" href="assets/css/plugins/slick-slider.css">
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!--=====  JS SCRIPT LINK =======-->
+    <script src="assets/js/plugins/jquery-3-7-1.min.js"></script>
+    <style>
+      .service-page-hero {
+        position: relative;
+        padding: 185px 0 120px;
+        background:
+          radial-gradient(circle at top left, rgba(242, 107, 108, 0.16), transparent 30%),
+          radial-gradient(circle at bottom right, rgba(47, 108, 179, 0.16), transparent 32%);
+      }
+
+      .service-page-hero .service-hero-panel {
+        position: relative;
+        z-index: 1;
+        border-radius: 36px;
+        padding: 34px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(47, 108, 179, 0.1);
+        box-shadow: 0 28px 80px rgba(17, 56, 85, 0.12);
+        backdrop-filter: blur(12px);
+      }
+
+      .service-page-hero .hero-header {
+        max-width: none;
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        text-align: left;
+        padding-right: 12px;
+      }
+
+      .service-breadcrumb {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 22px;
+        color: var(--ztc-text-text-3);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s16);
+        font-weight: var(--ztc-weight-medium);
+      }
+
+      .service-breadcrumb span {
+        color: #38566f;
+      }
+
+      .service-breadcrumb a {
+        color: #17324d;
+        opacity: 1;
+      }
+
+      .service-breadcrumb i {
+        font-size: 12px;
+        color: #f26b6c;
+      }
+
+      .service-hero-chip,
+      .service-section-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 16px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, rgba(47, 108, 179, 0.12), rgba(242, 107, 108, 0.14));
+        border: 1px solid rgba(47, 108, 179, 0.14);
+        color: #17324d;
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s14);
+        font-weight: var(--ztc-weight-semibold);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .service-hero-chip i,
+      .service-section-chip i {
+        color: #2f6cb3;
+      }
+
+      .service-page-hero .hero-header h1 {
+        margin-top: 22px;
+        color: var(--ztc-text-text-11);
+        font-size: clamp(40px, 5vw, 68px);
+        line-height: 1.04;
+        letter-spacing: -1.8px;
+      }
+
+      .service-hero-copy p {
+        margin-top: 22px;
+        max-width: 630px;
+        color: var(--ztc-text-text-20);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s18);
+        font-weight: var(--ztc-weight-regular);
+        line-height: 30px;
+      }
+
+      .service-hero-actions {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+      }
+
+      .service-secondary-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 60px;
+        padding: 16px 22px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid rgba(47, 108, 179, 0.18);
+        color: var(--ztc-text-text-12);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s16);
+        font-weight: var(--ztc-weight-semibold);
+        transition: all 0.3s ease;
+        box-shadow: 0 12px 30px rgba(17, 56, 85, 0.1);
+      }
+
+      .service-secondary-btn i {
+        color: var(--ztc-text-text-12);
+      }
+
+      .service-secondary-btn:hover {
+        transform: translateY(-3px);
+        color: var(--ztc-text-text-1);
+        background: var(--ztc-bg-bg-8);
+      }
+
+      .service-secondary-btn:hover i {
+        color: var(--ztc-text-text-1);
+      }
+
+      .service-hero-highlights {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .service-hero-highlights span {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 16px;
+        border-radius: 999px;
+        background: #fff;
+        border: 1px solid rgba(47, 108, 179, 0.12);
+        color: var(--ztc-text-text-11);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s15);
+        font-weight: var(--ztc-weight-medium);
+        box-shadow: 0 8px 24px rgba(17, 56, 85, 0.06);
+      }
+
+      .service-hero-highlights i {
+        color: var(--ztc-text-text-4);
+      }
+
+      .service-hero-visual {
+        position: relative;
+        min-height: 100%;
+      }
+
+      .service-hero-main {
+        position: relative;
+        border-radius: 30px;
+        overflow: hidden;
+        padding: 16px;
+        background: linear-gradient(160deg, rgba(47, 108, 179, 0.16), rgba(242, 107, 108, 0.18));
+      }
+
+      .service-hero-main > img {
+        width: 100%;
+        height: 480px;
+        object-fit: cover;
+        border-radius: 22px;
+      }
+
+      .service-hero-metrics {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .service-hero-metric {
+        padding: 18px 16px;
+        border-radius: 22px;
+        background: #fff;
+        border: 1px solid rgba(47, 108, 179, 0.08);
+        box-shadow: 0 12px 30px rgba(17, 56, 85, 0.07);
+      }
+
+      .service-hero-metric strong {
+        display: block;
+        color: var(--ztc-text-text-12);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s30);
+        font-weight: var(--ztc-weight-bold);
+        line-height: 1;
+      }
+
+      .service-hero-metric span {
+        display: block;
+        margin-top: 10px;
+        color: var(--ztc-text-text-20);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s14);
+        font-weight: var(--ztc-weight-medium);
+        line-height: 22px;
+      }
+
+      .service-page-shell {
+        position: relative;
+        z-index: 2;
+        margin-top: -70px;
+        padding-bottom: 120px;
+      }
+
+      .service-main-column,
+      .service-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .service-sidebar {
+        position: sticky;
+        top: 120px;
+      }
+
+      .service-card,
+      .service-sidebar-card {
+        border-radius: 30px;
+        padding: 34px;
+        background: #fff;
+        border: 1px solid rgba(47, 108, 179, 0.08);
+        box-shadow: 0 20px 60px rgba(17, 56, 85, 0.08);
+      }
+
+      .service-card h2,
+      .service-sidebar-card h3 {
+        color: var(--ztc-text-text-11);
+        font-family: var(--ztc-family-font1);
+      }
+
+      .service-card h2 {
+        margin-top: 18px;
+        font-size: clamp(30px, 3vw, 42px);
+        line-height: 1.14;
+        letter-spacing: -1px;
+      }
+
+      .service-card p,
+      .service-sidebar-card p {
+        color: var(--ztc-text-text-20);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s16);
+        font-weight: var(--ztc-weight-regular);
+        line-height: 28px;
+      }
+
+      .service-story-grid,
+      .service-signal-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+        gap: 28px;
+        align-items: center;
+      }
+
+      .service-story-stats,
+      .service-visit-grid {
+        display: grid;
+        gap: 16px;
+      }
+
+      .service-story-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 28px;
+      }
+
+      .service-story-stat {
+        padding: 18px;
+        border-radius: 22px;
+        background: linear-gradient(180deg, rgba(47, 108, 179, 0.08), rgba(242, 107, 108, 0.08));
+        border: 1px solid rgba(47, 108, 179, 0.08);
+      }
+
+      .service-story-stat strong {
+        display: block;
+        color: var(--ztc-text-text-12);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s24);
+        font-weight: var(--ztc-weight-bold);
+        line-height: 1.1;
+      }
+
+      .service-story-stat span {
+        display: block;
+        margin-top: 8px;
+        color: var(--ztc-text-text-20);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s14);
+        font-weight: var(--ztc-weight-medium);
+        line-height: 22px;
+      }
+
+      .service-story-media {
+        position: relative;
+      }
+
+      .service-story-media img {
+        width: 100%;
+        min-height: 400px;
+        object-fit: cover;
+        border-radius: 26px;
+      }
+
+      .service-story-badge {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        padding: 18px 20px;
+        border-radius: 20px;
+        background: rgba(17, 56, 85, 0.82);
+        color: var(--ztc-text-text-1);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s15);
+        font-weight: var(--ztc-weight-medium);
+        line-height: 24px;
+      }
+
+      .service-story-badge i {
+        margin-right: 10px;
+        color: var(--ztc-text-text-7);
+      }
+
+      .service-pillars-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 28px;
+      }
+
+      .service-pillar-card,
+      .service-visit-card,
+      .service-journey-step {
+        height: 100%;
+        padding: 24px;
+        border-radius: 24px;
+        background: var(--ztc-bg-bg-1);
+        border: 1px solid rgba(47, 108, 179, 0.1);
+      }
+
+      .service-pillar-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 58px;
+        height: 58px;
+        border-radius: 18px;
+        background: linear-gradient(180deg, rgba(242, 107, 108, 0.16), rgba(47, 108, 179, 0.16));
+        color: var(--ztc-text-text-12);
+        font-size: 22px;
+      }
+
+      .service-pillar-card h3,
+      .service-visit-card h3,
+      .service-journey-step h3,
+      .service-lineup-card h3 {
+        margin-top: 18px;
+        color: var(--ztc-text-text-11);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s22);
+        font-weight: var(--ztc-weight-semibold);
+        line-height: 30px;
+      }
+
+      .service-pillar-card p,
+      .service-journey-step p,
+      .service-lineup-card p,
+      .service-visit-card p {
+        margin-top: 10px;
+      }
+
+      .service-journey-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 28px;
+      }
+
+      .service-journey-step {
+        position: relative;
+        padding-top: 56px;
+      }
+
+      .service-journey-step::before {
+        content: attr(data-step);
+        position: absolute;
+        top: 20px;
+        left: 22px;
+        color: rgba(242, 107, 108, 0.22);
+        font-family: var(--ztc-family-font1);
+        font-size: 42px;
+        font-weight: var(--ztc-weight-bold);
+        line-height: 1;
+      }
+
+      .service-lineup-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        margin-top: 28px;
+      }
+
+      .service-lineup-card {
+        overflow: hidden;
+        border-radius: 26px;
+        background: #fff;
+        border: 1px solid rgba(47, 108, 179, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .service-lineup-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 46px rgba(17, 56, 85, 0.12);
+      }
+
+      .service-lineup-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .service-lineup-content {
+        padding: 24px;
+      }
+
+      .service-lineup-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .service-lineup-meta span,
+      .service-chip-list span {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 9px 14px;
+        border-radius: 999px;
+        background: rgba(47, 108, 179, 0.08);
+        color: var(--ztc-text-text-12);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s13);
+        font-weight: var(--ztc-weight-semibold);
+        letter-spacing: 0.02em;
+      }
+
+      .service-chip-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .service-chip-list span {
+        background: rgba(242, 107, 108, 0.08);
+        color: var(--ztc-text-text-11);
+      }
+
+      .service-chip-list i {
+        color: var(--ztc-text-text-4);
+      }
+
+      .service-faq-card .accordion {
+        margin-top: 28px;
+      }
+
+      .service-faq-card .accordion-item {
+        overflow: hidden;
+        margin-top: 14px;
+        border: 1px solid rgba(47, 108, 179, 0.1);
+        border-radius: 20px;
+        background: var(--ztc-bg-bg-1);
+      }
+
+      .service-faq-card .accordion-item:first-child {
+        margin-top: 0;
+      }
+
+      .service-faq-card .accordion-button {
+        padding: 22px 24px;
+        color: var(--ztc-text-text-11);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s18);
+        font-weight: var(--ztc-weight-semibold);
+        line-height: 28px;
+        box-shadow: none;
+        background: #fff;
+      }
+
+      .service-faq-card .accordion-button::after {
+        filter: brightness(0);
+      }
+
+      .service-faq-card .accordion-button:not(.collapsed) {
+        color: var(--ztc-text-text-1);
+        background: linear-gradient(135deg, var(--ztc-bg-bg-3), #ff8b8c);
+      }
+
+      .service-faq-card .accordion-button:not(.collapsed)::after {
+        filter: brightness(0) invert(1);
+      }
+
+      .service-faq-card .accordion-body {
+        padding: 0 24px 24px;
+        background: linear-gradient(135deg, rgba(242, 107, 108, 0.95), rgba(255, 139, 140, 0.95));
+      }
+
+      .service-faq-card .accordion-body p {
+        color: rgba(255, 255, 255, 0.92);
+      }
+
+      .service-sidebar-card h3 {
+        font-size: var(--ztc-font-size-font-s26);
+        font-weight: var(--ztc-weight-semibold);
+        line-height: 34px;
+      }
+
+      .service-sidebar-card h4 {
+        color: var(--ztc-text-text-11);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s18);
+        font-weight: var(--ztc-weight-semibold);
+        line-height: 26px;
+      }
+
+      .service-sidebar-cta {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(155deg, rgba(47, 108, 179, 0.98), rgba(30, 79, 138, 0.98));
+        color: var(--ztc-text-text-1);
+      }
+
+      .service-sidebar-cta::before,
+      .service-sidebar-cta::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .service-sidebar-cta::before {
+        width: 180px;
+        height: 180px;
+        top: -70px;
+        right: -60px;
+      }
+
+      .service-sidebar-cta::after {
+        width: 120px;
+        height: 120px;
+        left: -36px;
+        bottom: -36px;
+      }
+
+      .service-sidebar-cta > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .service-sidebar-cta h3,
+      .service-sidebar-cta p,
+      .service-sidebar-cta li,
+      .service-sidebar-cta a {
+        color: var(--ztc-text-text-1);
+      }
+
+      .service-sidebar-points {
+        display: grid;
+        gap: 12px;
+        margin: 22px 0 28px;
+      }
+
+      .service-sidebar-points li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s15);
+        font-weight: var(--ztc-weight-medium);
+        line-height: 24px;
+      }
+
+      .service-sidebar-points i {
+        margin-top: 3px;
+        color: var(--ztc-text-text-7);
+      }
+
+      .service-sidebar-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .service-sidebar-actions .service-secondary-btn {
+        background: rgba(255, 255, 255, 0.14);
+        border-color: rgba(255, 255, 255, 0.18);
+        color: var(--ztc-text-text-1);
+      }
+
+      .service-sidebar-actions .service-secondary-btn:hover {
+        background: #fff;
+        color: var(--ztc-text-text-12);
+      }
+
+      .service-sidebar-nav-links {
+        display: grid;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .service-sidebar-nav-links a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 16px 18px;
+        border-radius: 18px;
+        background: var(--ztc-bg-bg-1);
+        color: var(--ztc-text-text-11);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s16);
+        font-weight: var(--ztc-weight-semibold);
+        transition: all 0.3s ease;
+      }
+
+      .service-sidebar-nav-links a:hover {
+        transform: translateX(4px);
+        background: rgba(242, 107, 108, 0.1);
+        color: var(--ztc-text-text-4);
+      }
+
+      .service-hours-list,
+      .service-contact-list {
+        display: grid;
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .service-hours-list li,
+      .service-contact-list li {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 16px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid rgba(47, 108, 179, 0.1);
+        color: var(--ztc-text-text-20);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s15);
+        font-weight: var(--ztc-weight-medium);
+        line-height: 24px;
+      }
+
+      .service-hours-list li:last-child,
+      .service-contact-list li:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .service-hours-list strong,
+      .service-contact-list strong {
+        color: var(--ztc-text-text-11);
+        font-weight: var(--ztc-weight-semibold);
+      }
+
+      .service-hours-list span {
+        text-align: right;
+      }
+
+      .service-note-card {
+        background: linear-gradient(180deg, rgba(242, 107, 108, 0.1), rgba(47, 108, 179, 0.08));
+      }
+
+      .service-note-card a {
+        color: var(--ztc-text-text-12);
+        font-weight: var(--ztc-weight-semibold);
+      }
+
+      @media (max-width: 991px) {
+        .service-page-hero {
+          padding: 160px 0 90px;
+        }
+
+        .service-page-shell {
+          margin-top: -24px;
+          padding-bottom: 90px;
+        }
+
+        .service-sidebar {
+          position: static;
+        }
+
+        .service-story-grid,
+        .service-signal-layout,
+        .service-pillars-grid,
+        .service-journey-grid,
+        .service-lineup-grid,
+        .service-story-stats,
+        .service-hero-metrics {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .service-page-hero {
+          padding: 145px 0 75px;
+        }
+
+        .service-page-hero .service-hero-panel,
+        .service-card,
+        .service-sidebar-card {
+          padding: 24px;
+          border-radius: 24px;
+        }
+
+        .service-page-hero .hero-header h1 {
+          letter-spacing: -1.1px;
+        }
+
+        .service-hero-main > img,
+        .service-story-media img {
+          height: 320px;
+          min-height: 320px;
+        }
+
+        .service-hero-highlights,
+        .service-hero-actions {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .service-secondary-btn,
+        .service-sidebar-actions .vl-btn4,
+        .service-sidebar-actions .service-secondary-btn {
+          width: 100%;
+        }
+
+        .service-hours-list li,
+        .service-contact-list li {
+          grid-template-columns: 1fr;
+        }
+
+        .service-hours-list span {
+          text-align: left;
+        }
+      }
+
+      @keyframes dot {
+        0% { opacity: 0; }
+        50% { opacity: 1; }
+        100% { opacity: 0; }
+      }
+    </style>
+</head>
+<body class="homepage1-body">
+
+<!--===== PRELOADER STARTS =======-->
+<div class="cs_preloader">
+  <div class="cs_preloader_in">
+    <div class="cs_wave_first">
+      <img
+        src="assets/img/logo/442677277_466438559161188_4576483210212181879_n.jpg"
+        alt=""
+        style="width:100px;height:100px;"
+      >
+
+      <p style="text-align:center;font-size:18px;color:#4a585f;margin-top:10px;">
+        Loading
+        <span style="animation:dot 1.4s infinite; animation-delay:0s;">.</span>
+        <span style="animation:dot 1.4s infinite; animation-delay:0.2s;">.</span>
+        <span style="animation:dot 1.4s infinite; animation-delay:0.4s;">.</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!--===== PRELOADER ENDS =======-->
+
+<!--===== PROGRESS STARTS=======-->
+<div class="paginacontainer">
+     <div class="progress-wrap">
+       <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+       </svg>
+     </div>
+   </div>
+ <!--===== PROGRESS ENDS=======-->
+
+<!--=====HEADER START=======-->
+<header class="homepage4-body">
+  <div id="vl-header-sticky" class="vl-header-area vl-transparent-header">
+      <div class="container">
+          <div class="row align-items-center row-bg1">
+              <div class="col-lg-2 col-md-6 col-6">
+                  <div class="vl-logo">
+                      <a href="index.html"><img src="assets/img/logo/442677277_466438559161188_4576483210212181879_n.jpg" alt="JP Hospital"></a>
+                  </div>
+              </div>
+              <div class="col-lg-5 d-none d-lg-block">
+                  <div class="vl-main-menu text-center">
+                         <nav class="vl-mobile-menu-active">
+<ul>
+    <li class="has-dropdown">
+        <a href="index.html">Home <span class="arrow-size"></span></a>
+    </li>
+    <li class="has-dropdown">
+        <a href="about.html">About Us <span class="arrow-size"></span></a>
+    </li>
+    <li class="has-dropdown">
+      <a href="#">Explore <span class="arrow-size"><i class="fa-solid fa-angle-down d-lg-inline d-none"></i></span></a>
+        <ul class="sub-menu">
+            <li><a href="testimonial.html">Testimonials</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+        </ul>
+    </li>
+    <li class="has-dropdown">
+        <a href="faq.html">FAQs <span class="arrow-size"></span></a>
+    </li>
+    <li class="has-dropdown">
+        <a href="services.html">Services <span class="arrow-size"></span></a>
+    </li>
+    <li class="has-dropdown">
+        <a href="contact.html">Contact Us <span class="arrow-size"></span></a>
+    </li>
+</ul>
+                      </nav>
+                  </div>
+              </div>
+              <div class="col-lg-5 col-md-6 col-6">
+                <div class="vl-hero-btn d-none d-lg-block text-end">
+                  <div class="btn-area1">
+                    <a href="tel:+919418088778" class="phone"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <g clip-path="url(#clip0_5825_4343)">
+<path d="M4.32688 1.17598C4.79912 1.27359 5.1752 1.59087 5.40887 2.01006L6.15321 3.34544C6.42738 3.83727 6.65811 4.25117 6.80878 4.61098C6.96862 4.99266 7.06355 5.36904 7.02016 5.78518C6.97676 6.20131 6.80622 6.55001 6.57107 6.8905C6.3494 7.21148 6.03823 7.56888 5.66848 7.99356L4.57431 9.25038C4.37824 9.47563 4.2802 9.58821 4.27124 9.72896C4.26228 9.86971 4.34263 9.98996 4.50333 10.2304C5.87299 12.2796 7.71894 14.1262 9.76983 15.497C10.0103 15.6577 10.1305 15.738 10.2712 15.7291C10.412 15.7201 10.5247 15.6221 10.7498 15.426L12.0067 14.3318C12.4314 13.962 12.7888 13.6509 13.1098 13.4292C13.4502 13.194 13.799 13.0235 14.2151 12.9801C14.6312 12.9367 15.0077 13.0317 15.3893 13.1915C15.7491 13.3422 16.163 13.5729 16.6547 13.847L17.9902 14.5915C18.4094 14.8251 18.7267 15.2012 18.8243 15.6734C18.9229 16.1505 18.7775 16.6302 18.4562 17.0244C17.2904 18.4547 15.4227 19.3654 13.4633 18.9701C12.259 18.7272 11.0707 18.3225 9.63342 17.4982C6.74558 15.842 4.15636 13.2514 2.50212 10.367C1.67786 8.92963 1.2731 7.74134 1.03015 6.53696C0.634898 4.5776 1.54559 2.70987 2.9759 1.54412C3.37009 1.22284 3.84971 1.07736 4.32688 1.17598Z" fill="#F26B6C"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.3062 1.54C11.4337 1.0978 11.8957 0.842779 12.3379 0.970388C15.5607 1.90041 18.099 4.43862 19.0292 7.66132C19.1567 8.1035 18.9017 8.56545 18.4596 8.69304C18.0174 8.8207 17.5554 8.5657 17.4278 8.1235C16.6565 5.45101 14.5483 3.34295 11.8757 2.57171C11.4336 2.4441 11.1786 1.98219 11.3062 1.54ZM10.7947 5.47187C10.9747 5.04825 11.4639 4.85066 11.8876 5.03055C13.2723 5.6186 14.381 6.72725 14.969 8.11199C15.1489 8.53562 14.9513 9.02487 14.5277 9.20479C14.1041 9.38462 13.6148 9.18704 13.4349 8.76345C13.0157 7.77614 12.2234 6.9839 11.2361 6.56463C10.8125 6.38474 10.6149 5.8955 10.7947 5.47187Z" fill="#F26B6C"/>
+                        </g>
+                        <defs>
+<clipPath id="clip0_5825_4343">
+  <rect width="20" height="20" fill="white"/>
+</clipPath>
+                        </defs>
+                      </svg>+91 9418088778</a>
+                    <a href="https://drjpbisht.exlyapp.com/a8c4b282-6f3e-43cb-b506-ca9ee52e7de0" class="vl-btn4">Schedule Video Consultation<span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0.25C5.06294 0.25 0.25 5.06294 0.25 11C0.25 16.9371 5.06294 21.75 11 21.75C16.9371 21.75 21.75 16.9371 21.75 11C21.75 5.06294 16.9371 0.25 11 0.25ZM10 7C9.5955 7 9.2309 7.24364 9.0761 7.61732C8.92134 7.99099 9.0069 8.42111 9.2929 8.70711L10.5858 10L7.29289 13.2929C6.90237 13.6834 6.90237 14.3166 7.29289 14.7071C7.68342 15.0976 8.31658 15.0976 8.70711 14.7071L12 11.4142L13.2929 12.7071C13.5789 12.9931 14.009 13.0787 14.3827 12.9239C14.7564 12.7691 15 12.4045 15 12V8C15 7.44772 14.5523 7 14 7H10Z" fill="white"/>
+                      </svg></span></a>
+                </div>
+                </div>
+                <div class="vl-header-action-item d-block d-lg-none">
+                  <button type="button" class="vl-offcanvas-toggle">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                  </button>
+               </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
+ <!--=====HEADER END =======-->
+
+ <!--===== MOBILE HEADER STARTS =======-->
+<div class="homepage4-body">
+  <div class="vl-offcanvas">
+    <div class="vl-offcanvas-wrapper">
+        <div class="vl-offcanvas-header d-flex justify-content-between align-items-center mb-90">
+            <div class="vl-offcanvas-logo">
+              <a href="index.html"><img src="assets/img/logo/442677277_466438559161188_4576483210212181879_n.jpg" alt="JP Hospital"></a>
+            </div>
+            <div class="vl-offcanvas-close">
+               <button class="vl-offcanvas-close-toggle" type="button" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+
+        <div class="vl-offcanvas-menu d-lg-none mb-40">
+            <nav></nav>
+        </div>
+
+        <div class="space20"></div>
+        <div class="vl-offcanvas-info">
+            <div class="space20"></div>
+            <span><a href="mailto:drjpbisht@yahoo.com"> <i class="fa-regular fa-envelope"></i>drjpbisht@yahoo.com</a></span>
+            <span><a href="tel:+919418088778"><i class="fa-solid fa-phone"></i>+91 9418088778</a></span>
+            <span><a href="https://www.google.com/maps/place/JP+Hospital+Solan/@30.9065845,77.103454,17z/data=!3m1!4b1!4m12!1m5!3m4!2zMzDCsDU0JzIzLjciTiA3N8KwMDYnMzAuMCJF!8m2!3d30.90658!4d77.1083249!3m5!1s0x390f8149589b6593:0x71f9a4d795927ba!8m2!3d30.90658!4d77.1083249!16s%2Fg%2F1q63ck9x6?hl=en-US&amp;entry=ttu&amp;g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D"><i class="fa-solid fa-location-dot"></i>
+              JP Hospital
+              <br>
+              JP Hospital, Solan, Himachal Pradesh
+            </a></span>
+        </div>
+        <div class="space20"></div>
+        <div class="vl-offcanvas-social">
+            <h3 class="vl-offcanvas-sm-title">Follow Us</h3>
+            <div class="space20"></div>
+            <a href="https://www.facebook.com/jphospitalsolan/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/jp_hospital_solan/"><i class="fab fa-instagram"></i></a>
+         </div>
+    </div>
+</div>
+<div class="vl-offcanvas-overlay"></div>
+</div>
+<!--===== MOBILE HEADER ENDS =======-->
+
+<!--===== HERO AREA STARTS =======-->
+<div class="inner-header-section-area service-page-hero">
+  <div class="container">
+    <div class="service-hero-panel">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <div class="hero-header service-hero-copy">
+            <div class="service-breadcrumb">
+              <a href="index.html">Home</a>
+              <i class="fa-solid fa-angle-right"></i>
+              <span>Services</span>
+            </div>
+            <span class="service-hero-chip"><i class="fa-solid fa-heart-pulse"></i>Pediatric &amp; Neonatal Services</span>
+            <h1 class="text-anime-style-1">JP Hospital pediatric services are designed around every stage of childhood.</h1>
+            <p>
+              From newborn stabilization and preventive wellness visits to critical care support and
+              adolescent guidance, every service at JP Hospital is built to deliver safe, evidence-based,
+              family-centered care with clarity for parents at every step.
+            </p>
+            <div class="service-hero-actions">
+              <a href="https://drjpbisht.exlyapp.com/a8c4b282-6f3e-43cb-b506-ca9ee52e7de0" class="vl-btn4">Schedule Consultation<span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0.25C5.06294 0.25 0.25 5.06294 0.25 11C0.25 16.9371 5.06294 21.75 11 21.75C16.9371 21.75 21.75 16.9371 21.75 11C21.75 5.06294 16.9371 0.25 11 0.25ZM10 7C9.5955 7 9.2309 7.24364 9.0761 7.61732C8.92134 7.99099 9.0069 8.42111 9.2929 8.70711L10.5858 10L7.29289 13.2929C6.90237 13.6834 6.90237 14.3166 7.29289 14.7071C7.68342 15.0976 8.31658 15.0976 8.70711 14.7071L12 11.4142L13.2929 12.7071C13.5789 12.9931 14.009 13.0787 14.3827 12.9239C14.7564 12.7691 15 12.4045 15 12V8C15 7.44772 14.5523 7 14 7H10Z" fill="white"/>
+                </svg></span></a>
+              <a href="tel:+919418088778" class="service-secondary-btn"><i class="fa-solid fa-phone"></i>Call +91 9418088778</a>
+            </div>
+            <div class="service-hero-highlights">
+              <span><i class="fa-solid fa-baby"></i>Newborn &amp; NICU support</span>
+              <span><i class="fa-solid fa-shield-heart"></i>Preventive child wellness</span>
+              <span><i class="fa-solid fa-stethoscope"></i>OPD, diagnostics &amp; follow-up</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="service-hero-visual">
+            <div class="service-hero-main">
+              <img src="assets/img/refresh/service/care-journey-family.jpg" alt="Family arriving for pediatric care">
+            </div>
+            <div class="service-hero-metrics">
+              <div class="service-hero-metric">
+                <strong>38+</strong>
+                <span>Years of pediatric and neonatal experience</span>
+              </div>
+              <div class="service-hero-metric">
+                <strong>0-18</strong>
+                <span>Support spanning newborn, infant, child, and adolescent care</span>
+              </div>
+              <div class="service-hero-metric">
+                <strong>24/7</strong>
+                <span>Hospital-backed critical care coordination for high-risk cases</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--===== HERO AREA ENDS =======-->
+
+<!--===== SERVICE AREA STARTS =======-->
+<div class="service-page-shell">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <div class="service-main-column">
+          <section id="care-overview" class="service-card">
+            <div class="service-story-grid">
+              <div>
+                <span class="service-section-chip"><i class="fa-solid fa-star-of-life"></i>Care Overview</span>
+                <h2>Every JP Hospital visit is structured to feel calm, clear, and clinically thorough.</h2>
+                <p>
+                  Under the leadership of Dr. JP Bisht, JP Hospital combines pediatric and neonatal care with
+                  timely diagnosis, preventive planning, and compassionate parent communication. The service model
+                  is built to support both routine milestones and medically complex situations without losing
+                  the reassurance families need during a visit.
+                </p>
+                <p>
+                  Whether your child needs a newborn assessment, an OPD consultation, vaccination guidance,
+                  developmental review, or hospital-based critical care support, the focus remains consistent:
+                  understand the child fully, explain the plan clearly, and follow through with continuity of care.
+                </p>
+                <div class="service-story-stats">
+                  <div class="service-story-stat">
+                    <strong>Holistic</strong>
+                    <span>Consultation that looks at symptoms, growth, nutrition, and development together.</span>
+                  </div>
+                  <div class="service-story-stat">
+                    <strong>Preventive</strong>
+                    <span>Vaccination, routine checkups, and early guidance to reduce avoidable complications.</span>
+                  </div>
+                  <div class="service-story-stat">
+                    <strong>Responsive</strong>
+                    <span>Escalation to NICU, PICU, HDU, diagnostics, and hospital support when needed.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="service-story-media">
+                <img src="assets/img/refresh/service/pediatric-checkup.jpg" alt="Child receiving a pediatric checkup">
+                <div class="service-story-badge"><i class="fa-solid fa-circle-check"></i>Evidence-based pediatric care with parent-friendly guidance at every step.</div>
+              </div>
+            </div>
+          </section>
+
+          <section id="care-pillars" class="service-card">
+            <span class="service-section-chip"><i class="fa-solid fa-layer-group"></i>Care Pillars</span>
+            <h2>Four pillars shape how this service page is now organized.</h2>
+            <p>
+              The redesign groups care into the moments families actually need to understand: newborn support,
+              preventive wellness, acute treatment, and long-term growth guidance.
+            </p>
+            <div class="service-pillars-grid">
+              <article class="service-pillar-card">
+                <div class="service-pillar-icon"><i class="fa-solid fa-baby"></i></div>
+                <h3>Newborn &amp; neonatal care</h3>
+                <p>Assessment, stabilization, preterm and high-risk newborn follow-up, and NICU-linked support for vulnerable early days.</p>
+              </article>
+              <article class="service-pillar-card">
+                <div class="service-pillar-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                <h3>Preventive child wellness</h3>
+                <p>Well-child visits, immunization planning, routine monitoring, and anticipatory guidance that keeps families prepared.</p>
+              </article>
+              <article class="service-pillar-card">
+                <div class="service-pillar-icon"><i class="fa-solid fa-briefcase-medical"></i></div>
+                <h3>Illness, OPD &amp; critical care support</h3>
+                <p>From common infections to serious pediatric conditions, care pathways connect OPD, PICU, HDU, and diagnostics efficiently.</p>
+              </article>
+              <article class="service-pillar-card">
+                <div class="service-pillar-icon"><i class="fa-solid fa-seedling"></i></div>
+                <h3>Growth, nutrition &amp; adolescent guidance</h3>
+                <p>Support that goes beyond symptoms to address feeding, growth patterns, developmental progress, and age-specific counseling.</p>
+              </article>
+            </div>
+          </section>
+
+          <section id="care-journey" class="service-card">
+            <span class="service-section-chip"><i class="fa-solid fa-route"></i>Care Journey</span>
+            <h2>How care typically moves from first concern to follow-up.</h2>
+            <p>
+              The treatment experience is designed to remove uncertainty for parents and reduce delays in clinical decision-making.
+            </p>
+            <div class="service-journey-grid">
+              <article class="service-journey-step" data-step="01">
+                <h3>Listen &amp; understand</h3>
+                <p>Every consultation starts with symptom history, birth background, feeding details, developmental context, and parent concerns.</p>
+              </article>
+              <article class="service-journey-step" data-step="02">
+                <h3>Examine &amp; assess</h3>
+                <p>Clinical examination, growth review, newborn assessment, and diagnostic support are used according to the child’s needs.</p>
+              </article>
+              <article class="service-journey-step" data-step="03">
+                <h3>Treat &amp; guide</h3>
+                <p>Families receive a child-specific plan covering medication, monitoring, preventive steps, warning signs, and next actions.</p>
+              </article>
+              <article class="service-journey-step" data-step="04">
+                <h3>Review &amp; continue</h3>
+                <p>Follow-up is structured around recovery, growth, vaccination schedules, developmental milestones, and hospital support if required.</p>
+              </article>
+            </div>
+          </section>
+
+          <section id="clinical-services" class="service-card">
+            <span class="service-section-chip"><i class="fa-solid fa-hospital"></i>Clinical Services</span>
+            <h2>A complete service mix, presented as clear care categories instead of a generic list.</h2>
+            <p>
+              Families can quickly scan what is available, what each service covers, and how the different units work together around a child.
+            </p>
+            <div class="service-lineup-grid">
+              <article class="service-lineup-card">
+                <img src="assets/img/refresh/service/pediatric-checkup.jpg" alt="Newborn and infant consultation">
+                <div class="service-lineup-content">
+                  <div class="service-lineup-meta">
+                    <span><i class="fa-solid fa-baby"></i>Early Care</span>
+                  </div>
+                  <h3>Newborn &amp; infant care</h3>
+                  <p>Newborn assessments, feeding review, weight monitoring, jaundice evaluation, and early infant health support.</p>
+                </div>
+              </article>
+              <article class="service-lineup-card">
+                <img src="assets/img/refresh/works/nicu-newborn-care.jpg" alt="NICU newborn care">
+                <div class="service-lineup-content">
+                  <div class="service-lineup-meta">
+                    <span><i class="fa-solid fa-heart-pulse"></i>Neonatal Support</span>
+                  </div>
+                  <h3>NICU Level 2 &amp; high-risk follow-up</h3>
+                  <p>Advanced support for premature, low-birth-weight, and medically fragile newborns requiring close supervision.</p>
+                </div>
+              </article>
+              <article class="service-lineup-card">
+                <img src="assets/img/refresh/works/opd-consultation.jpg" alt="Pediatric outpatient consultation">
+                <div class="service-lineup-content">
+                  <div class="service-lineup-meta">
+                    <span><i class="fa-solid fa-stethoscope"></i>Consultation</span>
+                  </div>
+                  <h3>OPD consultations &amp; illness management</h3>
+                  <p>Routine visits, acute illness review, recurrent symptom evaluation, and follow-up care for infants, children, and adolescents.</p>
+                </div>
+              </article>
+              <article class="service-lineup-card">
+                <img src="assets/img/refresh/works/child-vaccination.jpg" alt="Child vaccination service">
+                <div class="service-lineup-content">
+                  <div class="service-lineup-meta">
+                    <span><i class="fa-solid fa-syringe"></i>Prevention</span>
+                  </div>
+                  <h3>Vaccination &amp; well-child visits</h3>
+                  <p>Immunization planning, routine growth checks, milestone tracking, and preventive health guidance for children and adults.</p>
+                </div>
+              </article>
+              <article class="service-lineup-card">
+                <img src="assets/img/refresh/works/picu-hospital-bed.jpg" alt="Pediatric intensive care setting">
+                <div class="service-lineup-content">
+                  <div class="service-lineup-meta">
+                    <span><i class="fa-solid fa-bed-pulse"></i>Critical Care</span>
+                  </div>
+                  <h3>PICU, HDU &amp; hospital-based support</h3>
+                  <p>Escalated monitoring and inpatient support for children who need a higher level of observation and treatment intensity.</p>
+                </div>
+              </article>
+              <article class="service-lineup-card">
+                <img src="assets/img/refresh/works/diagnostic-ultrasound.jpg" alt="Diagnostic ultrasound and pediatric investigations">
+                <div class="service-lineup-content">
+                  <div class="service-lineup-meta">
+                    <span><i class="fa-solid fa-wave-square"></i>Diagnostics</span>
+                  </div>
+                  <h3>EEG, ECG, USG &amp; digital X-ray</h3>
+                  <p>In-house diagnostic support for faster evaluation, sharper treatment decisions, and more coordinated pediatric care.</p>
+                </div>
+              </article>
+              <article class="service-lineup-card">
+                <img src="assets/img/refresh/works/laboratory-samples.jpg" alt="Laboratory services">
+                <div class="service-lineup-content">
+                  <div class="service-lineup-meta">
+                    <span><i class="fa-solid fa-flask-vial"></i>Lab Support</span>
+                  </div>
+                  <h3>Laboratory services</h3>
+                  <p>Essential investigations, infection markers, routine blood work, and coordinated testing that supports timely pediatric decisions.</p>
+                </div>
+              </article>
+              <article class="service-lineup-card">
+                <img src="assets/img/refresh/works/pharmacy-medications.jpg" alt="Pharmacy medications">
+                <div class="service-lineup-content">
+                  <div class="service-lineup-meta">
+                    <span><i class="fa-solid fa-pills"></i>Medication Support</span>
+                  </div>
+                  <h3>Pharmacy &amp; care continuity</h3>
+                  <p>Access to prescribed medications, treatment reinforcement, and a smoother link between diagnosis, therapy, and follow-up.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="service-card">
+            <div class="service-signal-layout">
+              <div>
+                <span class="service-section-chip"><i class="fa-solid fa-bell"></i>When Families Reach Out</span>
+                <h2>Common reasons parents seek pediatric or neonatal care.</h2>
+                <p>
+                  This section gives the page a more practical UX layer: parents can identify their situation quickly instead of decoding medical categories first.
+                </p>
+                <div class="service-chip-list">
+                  <span><i class="fa-solid fa-temperature-high"></i>Persistent fever</span>
+                  <span><i class="fa-solid fa-bottle-water"></i>Feeding difficulty</span>
+                  <span><i class="fa-solid fa-child-reaching"></i>Growth or milestone concern</span>
+                  <span><i class="fa-solid fa-lungs"></i>Breathing issues</span>
+                  <span><i class="fa-solid fa-sun"></i>Jaundice or weight loss in newborns</span>
+                  <span><i class="fa-solid fa-shield-virus"></i>Vaccination due dates</span>
+                  <span><i class="fa-solid fa-utensils"></i>Nutrition and appetite concerns</span>
+                  <span><i class="fa-solid fa-user-doctor"></i>Adolescent health questions</span>
+                </div>
+              </div>
+              <div class="service-visit-grid">
+                <article class="service-visit-card">
+                  <h3>Child-specific assessment</h3>
+                  <p>Not just symptom relief, but a deeper review of age, growth, development, and risk profile.</p>
+                </article>
+                <article class="service-visit-card">
+                  <h3>Clear plan for parents</h3>
+                  <p>Explained treatment steps, what to monitor at home, and when to return or escalate.</p>
+                </article>
+                <article class="service-visit-card">
+                  <h3>Continuity across services</h3>
+                  <p>OPD, diagnostics, inpatient support, and preventive care are presented as one connected system.</p>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section id="parent-faq" class="service-card service-faq-card">
+            <span class="service-section-chip"><i class="fa-solid fa-circle-question"></i>Parent FAQ</span>
+            <h2>Clear answers to the questions parents ask most often.</h2>
+            <p>
+              The FAQ remains part of the page, but it is now placed after the service overview and organized to feel like practical guidance rather than filler.
+            </p>
+            <div class="accordion" id="serviceFaqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeadingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                    What are common health concerns in newborns?
+                  </button>
+                </h3>
+                <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#serviceFaqAccordion">
+                  <div class="accordion-body">
+                    <p>Common newborn concerns include feeding difficulty, jaundice, weight change, breathing trouble, infection risk, temperature instability, and the need for high-risk follow-up after birth.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeadingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                    When should I consult a pediatrician for my child?
+                  </button>
+                </h3>
+                <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#serviceFaqAccordion">
+                  <div class="accordion-body">
+                    <p>You should consult for routine checkups, due vaccinations, feeding concerns, fever that is not settling, breathing changes, poor activity, developmental questions, or any symptom that feels unusual for your child.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeadingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                    Can growth or developmental delays be managed?
+                  </button>
+                </h3>
+                <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#serviceFaqAccordion">
+                  <div class="accordion-body">
+                    <p>Yes. Early identification, targeted guidance, follow-up monitoring, and timely intervention can significantly improve developmental outcomes and help families act before problems deepen.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeadingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                    How often should children have health checkups?
+                  </button>
+                </h3>
+                <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#serviceFaqAccordion">
+                  <div class="accordion-body">
+                    <p>Checkup frequency is highest in infancy, then continues at important growth and vaccination milestones. Regular review helps track growth, nutrition, behavior, school-age health, and preventive needs over time.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeadingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+                    Why is vaccination so important in pediatric care?
+                  </button>
+                </h3>
+                <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#serviceFaqAccordion">
+                  <div class="accordion-body">
+                    <p>Vaccination protects children against serious infectious diseases, supports community immunity, and remains one of the strongest preventive tools in modern pediatric care.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <aside class="service-sidebar">
+          <div class="service-sidebar-card service-sidebar-cta">
+            <h3>Book a consultation with confidence.</h3>
+            <p>
+              Use the service page as a decision tool, then move straight into booking or calling without hunting for the next step.
+            </p>
+            <ul class="service-sidebar-points">
+              <li><i class="fa-solid fa-check"></i>OPD consultations, newborn reviews, vaccination visits, and follow-up care</li>
+              <li><i class="fa-solid fa-check"></i>Hospital-supported escalation for NICU, PICU, HDU, diagnostics, and pharmacy coordination</li>
+              <li><i class="fa-solid fa-check"></i>Clear guidance for parents before, during, and after each visit</li>
+            </ul>
+            <div class="service-sidebar-actions">
+              <a href="https://drjpbisht.exlyapp.com/a8c4b282-6f3e-43cb-b506-ca9ee52e7de0" class="vl-btn4">Book Appointment<span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0.25C5.06294 0.25 0.25 5.06294 0.25 11C0.25 16.9371 5.06294 21.75 11 21.75C16.9371 21.75 21.75 16.9371 21.75 11C21.75 5.06294 16.9371 0.25 11 0.25ZM10 7C9.5955 7 9.2309 7.24364 9.0761 7.61732C8.92134 7.99099 9.0069 8.42111 9.2929 8.70711L10.5858 10L7.29289 13.2929C6.90237 13.6834 6.90237 14.3166 7.29289 14.7071C7.68342 15.0976 8.31658 15.0976 8.70711 14.7071L12 11.4142L13.2929 12.7071C13.5789 12.9931 14.009 13.0787 14.3827 12.9239C14.7564 12.7691 15 12.4045 15 12V8C15 7.44772 14.5523 7 14 7H10Z" fill="white"/>
+                </svg></span></a>
+              <a href="tel:+919418088778" class="service-secondary-btn"><i class="fa-solid fa-phone"></i>Talk to JP Hospital</a>
+            </div>
+          </div>
+
+          <div class="service-sidebar-card">
+            <h3>Jump to section</h3>
+            <div class="service-sidebar-nav-links">
+              <a href="#care-overview">Care overview <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="#care-pillars">Care pillars <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="#care-journey">Care journey <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="#clinical-services">Clinical services <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="#parent-faq">Parent FAQ <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="service-sidebar-card">
+            <h3>OPD timings</h3>
+            <ul class="service-hours-list">
+              <li><strong>Monday - Saturday</strong><span>11:00 AM - 1:50 PM</span></li>
+              <li><strong>Evening clinic</strong><span>6:45 PM - 8:45 PM</span></li>
+              <li><strong>Sunday</strong><span>Closed</span></li>
+            </ul>
+          </div>
+
+          <div class="service-sidebar-card service-note-card">
+            <h3>Visit information</h3>
+            <p>
+              For newborn concerns, persistent fever, breathing difficulty, poor feeding, or urgent deterioration,
+              call the hospital directly so the team can guide you to the right level of care quickly.
+            </p>
+            <ul class="service-contact-list">
+              <li><strong>Phone</strong><span><a href="tel:+919418088778">+91 9418088778</a></span></li>
+              <li><strong>Email</strong><span><a href="mailto:drjpbisht@yahoo.com">drjpbisht@yahoo.com</a></span></li>
+              <li><strong>Location</strong><span><a href="https://www.google.com/maps/place/JP+Hospital+Solan/@30.9065845,77.103454,17z/data=!3m1!4b1!4m12!1m5!3m4!2zMzDCsDU0JzIzLjciTiA3N8KwMDYnMzAuMCJF!8m2!3d30.90658!4d77.1083249!3m5!1s0x390f8149589b6593:0x71f9a4d795927ba!8m2!3d30.90658!4d77.1083249!16s%2Fg%2F1q63ck9x6?hl=en-US&amp;entry=ttu&amp;g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D">JP Hospital, Solan</a></span></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>
+<!--===== SERVICE AREA ENDS =======-->
+
+<!--===== CTA AREA STARTS =======-->
+<div class="cta4-section-area" style="background-image: linear-gradient(135deg, rgba(17, 56, 85, 0.84), rgba(17, 56, 85, 0.58)), url(assets/img/refresh/bg/inner-waiting-room.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="cta-content-area heading1 cta-centered-content">
+          <h2 class="text-anime-style-3">Guiding every little milestone with trusted pediatric care.</h2>
+          <div class="space24"></div>
+          <div class="btn-area1">
+            <a href="https://drjpbisht.exlyapp.com/a8c4b282-6f3e-43cb-b506-ca9ee52e7de0" class="vl-btn4">Schedule an Appointment <span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0.25C5.06294 0.25 0.25 5.06294 0.25 11C0.25 16.9371 5.06294 21.75 11 21.75C16.9371 21.75 21.75 16.9371 21.75 11C21.75 5.06294 16.9371 0.25 11 0.25ZM10 7C9.5955 7 9.2309 7.24364 9.0761 7.61732C8.92134 7.99099 9.0069 8.42111 9.2929 8.70711L10.5858 10L7.29289 13.2929C6.90237 13.6834 6.90237 14.3166 7.29289 14.7071C7.68342 15.0976 8.31658 15.0976 8.70711 14.7071L12 11.4142L13.2929 12.7071C13.5789 12.9931 14.009 13.0787 14.3827 12.9239C14.7564 12.7691 15 12.4045 15 12V8C15 7.44772 14.5523 7 14 7H10Z" fill="white"/>
+              </svg></span></a>
+            <a href="tel:+919418088778" class="phone"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <g clip-path="url(#clip0_5825_4343)">
+                  <path d="M4.32688 1.17598C4.79912 1.27359 5.1752 1.59087 5.40887 2.01006L6.15321 3.34544C6.42738 3.83727 6.65811 4.25117 6.80878 4.61098C6.96862 4.99266 7.06355 5.36904 7.02016 5.78518C6.97676 6.20131 6.80622 6.55001 6.57107 6.8905C6.3494 7.21148 6.03823 7.56888 5.66848 7.99356L4.57431 9.25038C4.37824 9.47563 4.2802 9.58821 4.27124 9.72896C4.26228 9.86971 4.34263 9.98996 4.50333 10.2304C5.87299 12.2796 7.71894 14.1262 9.76983 15.497C10.0103 15.6577 10.1305 15.738 10.2712 15.7291C10.412 15.7201 10.5247 15.6221 10.7498 15.426L12.0067 14.3318C12.4314 13.962 12.7888 13.6509 13.1098 13.4292C13.4502 13.194 13.799 13.0235 14.2151 12.9801C14.6312 12.9367 15.0077 13.0317 15.3893 13.1915C15.7491 13.3422 16.163 13.5729 16.6547 13.847L17.9902 14.5915C18.4094 14.8251 18.7267 15.2012 18.8243 15.6734C18.9229 16.1505 18.7775 16.6302 18.4562 17.0244C17.2904 18.4547 15.4227 19.3654 13.4633 18.9701C12.259 18.7272 11.0707 18.3225 9.63342 17.4982C6.74558 15.842 4.15636 13.2514 2.50212 10.367C1.67786 8.92963 1.2731 7.74134 1.03015 6.53696C0.634898 4.5776 1.54559 2.70987 2.9759 1.54412C3.37009 1.22284 3.84971 1.07736 4.32688 1.17598Z" fill="#F26B6C"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3062 1.54C11.4337 1.0978 11.8957 0.842779 12.3379 0.970388C15.5607 1.90041 18.099 4.43862 19.0292 7.66132C19.1567 8.1035 18.9017 8.56545 18.4596 8.69304C18.0174 8.8207 17.5554 8.5657 17.4278 8.1235C16.6565 5.45101 14.5483 3.34295 11.8757 2.57171C11.4336 2.4441 11.1786 1.98219 11.3062 1.54ZM10.7947 5.47187C10.9747 5.04825 11.4639 4.85066 11.8876 5.03055C13.2723 5.6186 14.381 6.72725 14.969 8.11199C15.1489 8.53562 14.9513 9.02487 14.5277 9.20479C14.1041 9.38462 13.6148 9.18704 13.4349 8.76345C13.0157 7.77614 12.2234 6.9839 11.2361 6.56463C10.8125 6.38474 10.6149 5.8955 10.7947 5.47187Z" fill="#F26B6C"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_5825_4343M">
+                    <rect width="20" height="20" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>+91 9418088778</a>
+          </div>
+        </div>
+        <div class="cta-playful-scene" aria-hidden="true">
+          <div class="cta-playful-card card-rainbow">
+            <img src="assets/img/theme/child-rainbow-cloud.svg" alt="" loading="lazy">
+          </div>
+          <div class="cta-playful-card card-balloons">
+            <img src="assets/img/theme/child-balloons.svg" alt="" loading="lazy">
+          </div>
+          <div class="cta-playful-card card-kite">
+            <img src="assets/img/theme/child-kite.svg" alt="" loading="lazy">
+          </div>
+          <div class="cta-playful-card card-duck">
+            <img src="assets/img/theme/baby-duck.svg" alt="" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--===== CTA AREA ENDS =======-->
+
+<!--===== FOOTER AREA STARTS =======-->
+<div class="vl-footer4-section-area" style="background-image: linear-gradient(180deg, rgba(14, 45, 74, 0.92), rgba(14, 45, 74, 0.8)), url(assets/img/refresh/bg/footer-clinic-interior.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-5 col-md-6">
+        <div class="footer-description-area">
+          <h3 style="font-weight:700;">JP Hospital</h3>
+          <div class="space24"></div>
+          <div class="footer-community-card">
+            <h3>Stay Updated with JP Hospital</h3>
+            <p>Subscribe for JP Hospital news, pediatric health tips, and updates.</p>
+            <a href="https://drjpbisht.exlyapp.com/4d2ba89d-1718-4795-b537-b6f9793369b2" class="vl-btn4">Join JP Hospital Community</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg col-md-6">
+        <div class="space30 d-md-none d-block"></div>
+        <div class="footer-widget-area foot-padding1">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="testimonial.html">Parent Testimonials</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg col-md-6">
+        <div class="space30 d-lg-none d-block"></div>
+        <div class="footer-widget-area">
+          <h3>Contact Us</h3>
+          <ul>
+
+            <li>
+              <a href="tel:+919418088778">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M14.05 6C15.0268 6.19057 15.9244 6.66826 16.6281 7.37194C17.3318 8.07561 17.8095 8.97326 18 9.95M14.05 2C16.0793 2.22544 17.9716 3.13417 19.4163 4.57701C20.8609 6.01984 21.7721 7.91101 22 9.94M18.5 21C9.93959 21 3 14.0604 3 5.5C3 5.11378 3.01413 4.73086 3.04189 4.35173C3.07375 3.91662 3.08968 3.69907 3.2037 3.50103C3.29814 3.33701 3.4655 3.18146 3.63598 3.09925C3.84181 3 4.08188 3 4.56201 3H7.37932C7.78308 3 7.98496 3 8.15802 3.06645C8.31089 3.12515 8.44701 3.22049 8.55442 3.3441C8.67601 3.48403 8.745 3.67376 8.88299 4.05321L10.0491 7.26005C10.2096 7.70153 10.2899 7.92227 10.2763 8.1317C10.2643 8.31637 10.2012 8.49408 10.0942 8.64506C9.97286 8.81628 9.77145 8.93713 9.36863 9.17882L8 10C9.2019 12.6489 11.3501 14.7999 14 16L14.8212 14.6314C15.0629 14.2285 15.1837 14.0271 15.3549 13.9058C15.5059 13.7988 15.6836 13.7357 15.8683 13.7237C16.0777 13.7101 16.2985 13.7904 16.74 13.9509L19.9468 15.117C20.3262 15.255 20.516 15.324 20.6559 15.4456C20.7795 15.553 20.8749 15.6891 20.9335 15.842C21 16.015 21 16.2169 21 16.6207V19.438C21 19.9181 21 20.1582 20.9007 20.364C20.8185 20.5345 20.663 20.7019 20.499 20.7963C20.3009 20.9103 20.0834 20.9262 19.6483 20.9581C19.2691 20.9859 18.8862 21 18.5 21Z"
+                        stroke="#31353D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                +91 9418088778
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:drjpbisht@yahoo.com">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M4 18L9 12M20 18L15 12M3 8L10.225 12.8166C10.8665 13.2443 11.1872 13.4582 11.5339 13.5412C11.8403 13.6147 12.1597 13.6147 12.4661 13.5412C12.8128 13.4582 13.1335 13.2443 13.775 12.8166L21 8M6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V8.2C21 7.0799 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19Z" stroke="#31353D" stroke-width="1.6"/>
+              </svg> drjpbisht@yahoo.com</a>
+            </li>
+
+            <li>
+              <a href="https://www.google.com/maps/place/JP+Hospital+Solan/@30.9065845,77.103454,17z/data=!3m1!4b1!4m12!1m5!3m4!2zMzDCsDU0JzIzLjciTiA3N8KwMDYnMzAuMCJF!8m2!3d30.90658!4d77.1083249!3m5!1s0x390f8149589b6593:0x71f9a4d795927ba!8m2!3d30.90658!4d77.1083249!16s%2Fg%2F1q63ck9x6?hl=en-US&amp;entry=ttu&amp;g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z"
+                        stroke="#31353D" stroke-width="1.6"/>
+                  <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                        stroke="#31353D" stroke-width="1.6"/>
+                </svg>
+                JP Hospital
+                <br>
+                <br>
+                JP Hospital, Solan, Himachal Pradesh
+
+              </a>
+            </li>
+
+          </ul>
+
+          <div class="space20"></div>
+
+          <ul class="social-links">
+            <li>
+              <a href="https://www.facebook.com/jphospitalsolan/">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/jp_hospital_solan/">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="space100"></div>
+
+    <div class="col-lg-12">
+      <div class="copyright-area">
+        <a href="#">© Copyright 2026 JP Hospital. All Rights Reserved</a>
+        <ul>
+          <li><a href="#">Privacy Policy</a><span> | </span></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--===== FOOTER AREA ENDS =======-->
+
+
+<!--===== JS SCRIPT LINK =======-->
+<script src="assets/js/plugins/bootstrap.min.js"></script>
+<script src="assets/js/plugins/fontawesome.js"></script>
+<script src="assets/js/plugins/aos.js"></script>
+<script src="assets/js/plugins/counter.js"></script>
+<script src="assets/js/plugins/gsap.min.js"></script>
+<script src="assets/js/plugins/ScrollTrigger.min.js"></script>
+<script src="assets/js/plugins/Splitetext.js"></script>
+<script src="assets/js/plugins/SmoothScroll.js"></script>
+<script src="assets/js/plugins/sidebar.js"></script>
+<script src="assets/js/plugins/magnific-popup.js"></script>
+<script src="assets/js/plugins/mobilemenu.js"></script>
+<script src="assets/js/plugins/owlcarousel.min.js"></script>
+<script src="assets/js/plugins/nice-select.js"></script>
+<script src="assets/js/plugins/waypoints.js"></script>
+<script src="assets/js/plugins/slick-slider.js"></script>
+<script src="assets/js/plugins/circle-progress.js"></script>
+<script src="assets/js/plugins/swiper.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
